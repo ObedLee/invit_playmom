@@ -89,10 +89,10 @@
         <img id="mt-50" class="reveal second-part width-10" src="img2/leap2.png" alt="leap2">
       </div>
 
-      <div class="fourth-part reveal width-65">
+      <div class="fourth-part reveal width-75">
         <img id="mt-50" class="fourth-part" src="img2/location.png" alt="location">
       
-        <div id="map" class="width-80 reveal"></div>
+        <div id="map mt-50" class="reveal"></div>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aabc292c0136a9e1bcbabcc29f4a1a14"></script>
         <script>
           var container = document.getElementById('map');
@@ -142,6 +142,12 @@
 
       <div id="information" class="toggle-on;">
 
+        <div>
+          <a href="https://playmom.co.kr/"
+          target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img2/logo.png"
+            class="sns-logo"></a>   
+        </div>
+
         <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
           integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
         <script>
@@ -160,28 +166,6 @@
             });
           }
         </script>
-          <div>
-          <a href="https://dmz1023.github.io/invit_playmom/" id="copyUrl"
-          class="shadow-small icon icon-round no-border icon-xs bg-tumblr"><i class="fa fa-link font-14"></i></a>
-
-        </div>
-        <div>
-          <textarea id="url" readonly="">http://www.newcomersworship.tk/</textarea>
-          <script>
-            $("#copyUrl").click(function () {
-              $("#url").select();
-              document.execCommand('copy');
-              alert("초대장 링크(url주소)를 복사 하였습니다.");
-            });
-          </script>
-
-        </div>
-
-        <div>
-          <a href="https://playmom.co.kr/"
-          target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img2/logo.png"
-            class="sns-logo"></a>   
-        </div>
         <div>
           <a href="https://www.instagram.com/playmom_official/&amp;src=sdkpreparse"
           target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/insta.png"
@@ -192,12 +176,27 @@
             target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/logo_cafe.png"
               class="sns-logo"></a>
         </div>
-        <div>
-          <a href="https://dmz1023.github.io/invit_playmom/"
-          class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
-            class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a>
-        </div>
 
+        <div>
+          <a href="https://dmz1023.github.io/invit_playmom/" id="copyUrl"
+          class="shadow-small icon icon-round no-border icon-xs bg-tumblr"><i class="fa fa-link font-14"></i></a>
+
+        </div>
+        <textarea id="url" readonly="">https://dmz1023.github.io/invit_playmom/</textarea>
+        <div>
+          <script>
+            $("#copyUrl").click(function () {
+              $("#url").select();
+              document.execCommand('copy');
+              alert("초대장 링크(url주소)를 복사 하였습니다.");
+            });
+          </script>
+          <div>
+            <a href="https://dmz1023.github.io/invit_playmom/"
+            class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
+              class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a>
+        </div>
+        </div>
         </div>
       </div>
 
