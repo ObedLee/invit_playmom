@@ -61,7 +61,7 @@
     <div class="page-content" style="transition: all 300ms ease 0s;">
       <div class="main-img" id="thisone" >
         <img id="background" src="img2/envelope.jpg" alt="background">
-        <img id="" src="img2/letter.png" alt="background">
+        <img id="letter" src="img2/letter.png" alt="background">
       </div>  
 
       <div>
@@ -73,26 +73,26 @@
         <img class="first-part width-30 " src="img2/playmom.png" alt="playmom">
         <img id="mt-30" class="first-part width-60" src="img2/title.png" alt="title">
         <img id="mt-50" class="first-part width-80" src="img2/line.png" alt="line">
-        <img id="mt-50"class="first-part width-75" src="img2/content1.png" alt="cont1">
+        <img id="mt-50"class="first-part width-70" src="img2/content1.png" alt="cont1">
         <img id="mt-50" class="first-part width-10" src="img2/leap2.png" alt="leap2">
       </div>
 
 
       <div id="second-part">
-        <img id="mt-50"class="reveal second-part width-75" src="img2/content2.png" alt="cont2">
-        <img id="mt-50" class="reveal second-part width-50" src="img2/order.png" alt="order">
+        <img id="mt-50"class="reveal second-part width-70" src="img2/content2.png" alt="cont2">
+        <img id="mt-50" class="reveal second-part width-40" src="img2/order.png" alt="order">
         <img id="mt-50" class="reveal second-part width-10" src="img2/leap2.png" alt="leap2">
       </div>
 
       <div class="third-part">
-        <img id="mt-50" class="third-part reveal width-75" src="img2/list.png" alt="list">
+        <img id="mt-50" class="third-part reveal width-70" src="img2/list.png" alt="list">
         <img id="mt-50" class="reveal second-part width-10" src="img2/leap2.png" alt="leap2">
       </div>
 
-      <div id="mt-50" class="fourth-part reveal width-75">
-        <img class="fourth-part" src="img2/location.png" alt="location">
+      <div id="mt-50" class="fourth-part reveal width-70">
+        <img id="mt-50" class="fourth-part" src="img2/location.png" alt="location">
       
-        <div id="map" class="reveal mt-50"></div>
+        <div id="map" class="reveal" style="height: 300px; width:300px;"></div>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aabc292c0136a9e1bcbabcc29f4a1a14"></script>
         <script>
           var container = document.getElementById('map');
@@ -135,8 +135,11 @@
               });
           }
         </script>
+      </div>
 
-        <img id="mt-50" class="third-part reveal width-65" src="img2/content3.png" alt="con3">  
+      <div>
+        <img class="fiveth-part reveal width-60" src="img2/content3.png" alt="con3">  
+        <img id="mt-50" class="fiveth-part width-30 " src="img2/playmom.png" alt="playmom">
       </div>
       
 
@@ -182,7 +185,7 @@
           class="shadow-small icon icon-round no-border icon-xs bg-tumblr"><i class="fa fa-link font-14"></i></a>
 
         </div>
-        <textarea id="url" readonly="">https://dmz1023.github.io/invit_playmom/</textarea>
+        <textarea id="url" readonly="">https://dmz1023.github.io/invit_playmom</textarea>
         <div>
           <script>
             $("#copyUrl").click(function () {
@@ -203,38 +206,15 @@
       <!-- 오시는길 끝 -->
 
 
-      <!-- 안내문구 끝 -->
+      <!-- 안내문구 끝
       <div class="footer footer-no-padding" style="transition: all 300ms ease 0s;">
         <div class="footer-socials">
-          
-          <a id="kakao-link-btn" href="javascript:;" class="shadow-small icon icon-round no-border icon-xs">
-            <img src="./src/logo_kakaotalk.jpg" class="sns-logo"></a>
-          <script type="text/javascript">
-            // 사용할 앱의 JavaScript 키를 설정해 주세요. 1회만 설정-카카오내비랑 중복x
-            //Kakao.init('244dcfcf4f8177563ab5bd1f09f8c2a1');
-            // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-            Kakao.Link.createDefaultButton({
-              container: '#kakao-link-btn',
-              objectType: 'feed',
-              content: {
-                title: '안디옥교회 창립 30주년 기념',
-                description: '2022년 5월 14일 토요일 오후 2시  ',
-                imageUrl: 'http://www.antiochi.net/ach30invite/src/theme.jpg',
-                link: {
-                  mobileWebUrl: 'http://www.antiochi.net/ach30invite',
-                  webUrl: 'http://www.antiochi.net/ach30invite'
-                },
-              },
-              buttonTitle: '자세히 보기',
-            });
-          </script>
 
-          
         <p class="center-text bottom-0"><img src="img/안디옥대학청년회1.png" class="sns-logo"></p>
         <p class="footer-text"> ©&nbsp;<script>
             document.write(new Date().getFullYear())
           </script> Antioch Church</a>, all rights reserved</p>
-      </div>
+      </div> -->
     </div>
 
 </body>
