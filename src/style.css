@@ -1490,3 +1490,7 @@ padding-right: 0;
     opacity: 100%;
   }
 }
+
+.wrap {
+  margin-top: 10px;
+}
