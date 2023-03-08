@@ -59,6 +59,16 @@ padding: 0;
   animation:test 2s;
 }
 
+#letter1{
+  position: relative;
+  animation:test 2.5s;
+}
+
+#letter2{
+  position: relative;
+  animation:test 3s;
+}
+
 @keyframes test{
 
   0%{top:-300px;}
