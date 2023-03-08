@@ -134,6 +134,22 @@
                   image : markerImage // 마커 이미지 
               });
           }
+
+          // 커스텀 오버레이에 표시할 내용입니다     
+        // HTML 문자열 또는 Dom Element 입니다 
+        var content = '<div class ="label"><span class="left"></span><span class="center">주차장</span><span class="right"></span></div>';
+
+        // 커스텀 오버레이가 표시될 위치입니다 
+        var position = new kakao.maps.LatLng(37.29911137278253, 127.00801923792174);  
+
+        // 커스텀 오버레이를 생성합니다
+        var customOverlay = new kakao.maps.CustomOverlay({
+            position: position,
+            content: content   
+        });
+
+        // 커스텀 오버레이를 지도에 표시합니다
+        customOverlay.setMap(map);
         </script>
       </div>
 
@@ -183,23 +199,22 @@
         <div>
           <a href="https://dmz1023.github.io/invit_playmom/" id="copyUrl"
           class="shadow-small icon icon-round no-border icon-xs bg-tumblr"><i class="fa fa-link font-14"></i></a>
-
         </div>
-        <textarea id="url" readonly="">https://dmz1023.github.io/invit_playmom</textarea>
+ 
         <div>
-          <script>
-            $("#copyUrl").click(function () {
-              $("#url").select();
-              document.execCommand('copy');
-              alert("초대장 링크(url주소)를 복사 하였습니다.");
-            });
-          </script>
-          <div>
-            <a href="https://dmz1023.github.io/invit_playmom/"
-            class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
-              class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a>
-        </div>
-        </div>
+          <a href="https://dmz1023.github.io/invit_playmom/"
+          class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
+            class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a>
+        </div>   
+        
+        <textarea id="url" readonly="">https://dmz1023.github.io/invit_playmom/</textarea>
+						<script>
+							$("#copyUrl").click(function () {
+								$("#url").select();
+								document.execCommand('copy');
+								alert("초대장 링크(url주소)를 복사 하였습니다.");
+							});
+						</script>
         </div>
       </div>
 
