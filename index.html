@@ -92,12 +92,12 @@
       <div class="fourth-part">
         <img id="mt-50" class="third-part reveal width-65" src="img2/location.png" alt="location">
       
-        <div id="map" class="width-80"></div>
+        <div id="map" class="width-80 reveal"></div>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aabc292c0136a9e1bcbabcc29f4a1a14"></script>
         <script>
           var container = document.getElementById('map');
           var options = {
-            center: new kakao.maps.LatLng(37.30071519546329, 127.00834650079881),
+            center: new kakao.maps.LatLng(37.3003998548915, 127.00802501422355),
             level: 3
           };
       
@@ -116,7 +116,7 @@
           ];
 
           // 마커 이미지의 이미지 주소입니다
-          var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+          var imageSrc = "./img/marker_red.png"; 
               
           for (var i = 0; i < positions.length; i ++) {
               
@@ -141,35 +141,29 @@
       
 
       <div id="information" class="toggle-on;">
-        <div>
-          <a href="https://www.youtube.com/channel/UCleQoiUFmXaqlPu_GSzRNww/&amp;src=sdkpreparse"
-            target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/youtube-logo.png"
-              class="sns-logo"></a>
-        </div>
-        <div>
-          <a href="https://instagram.com/antioch1k?igshid=NWRhNmQxMjQ=/&amp;src=sdkpreparse"
-          target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/insta.png"
-            class="sns-logo"></a>
-        </div>
-        <div>
-          <a href="https://soundcloud.com/wzpjxy1a1xfk?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing/&amp;src=sdkpreparse"
-          target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/logo_soundcloud.jpg"
-            class="sns-logo"></a>  
-        </div>
-        <div>
-          <a href="http://antiochi.org/about/"
-          target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/antioch.png"
-            class="sns-logo"></a>   
-        </div>
-        <div>
+
+        <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+          integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+        <script>
+          Kakao.init('aabc292c0136a9e1bcbabcc29f4a1a14'); // 사용하려는 앱의 JavaScript 키 입력
+        </script>
+
+        <a id="kakaotalk-sharing-btn" href="javascript:shareMessage()">
+          <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" class="shadow-small icon icon-round no-border icon-xs"
+            alt="카카오톡 공유 보내기 버튼" />
+        </a>
+
+        <script>
+          function shareMessage() {
+            Kakao.Share.sendScrap({
+              requestUrl: 'https://dmz1023.github.io/invit_playmom/',
+            });
+          }
+        </script>
+          <div>
           <a href="http://www.newcomersworship.tk/#" id="copyUrl"
           class="shadow-small icon icon-round no-border icon-xs bg-tumblr"><i class="fa fa-link font-14"></i></a>
 
-        </div>
-        <div>
-          <a href="http://www.newcomersworship.tk/#"
-          class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
-            class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a>
         </div>
         <div>
           <textarea id="url" readonly="">http://www.newcomersworship.tk/</textarea>
@@ -181,6 +175,27 @@
             });
           </script>
 
+        </div>
+
+        <div>
+          <a href="https://playmom.co.kr/"
+          target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img2/logo.png"
+            class="sns-logo"></a>   
+        </div>
+        <div>
+          <a href="https://www.instagram.com/playmom_official/&amp;src=sdkpreparse"
+          target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/insta.png"
+            class="sns-logo"></a>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/channel/UCleQoiUFmXaqlPu_GSzRNww/&amp;src=sdkpreparse"
+            target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/logo_cafe.png"
+              class="sns-logo"></a>
+        </div>
+        <div>
+          <a href="http://www.newcomersworship.tk/#"
+          class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
+            class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a>
         </div>
 
         </div>
