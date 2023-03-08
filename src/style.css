@@ -4,6 +4,7 @@
 .tile {
   background-image: url("../tile.png");
   background-repeat: repeat;
+
 }
 
 #preloader h1 {
@@ -912,10 +913,11 @@ p {
 }
 
 
-
 #url {
-  width: 0px;
-  height: 0px;
+  width: 1px;
+  height: 1px;
+  color: #000000;
+  background: #000000;
 }
 
 #url2 {
@@ -925,7 +927,7 @@ p {
   background: #f2f5f7;
 }
 
-. strong i {
+.strong i {
   padding: 0px 5px;
 }
 
