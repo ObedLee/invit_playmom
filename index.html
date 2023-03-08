@@ -9,7 +9,7 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover, user-scalable=yes">
   <meta name="format-detection" content="telephone=no">
-  <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
+  <link rel="shortcut icon" type="image/x-icon" href="img2/logo.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--링크복사, 위로가기 토글 아이콘-->
   <link rel="stylesheet" type="text/css" href="./src/framework.css"><!--  로딩 -->
@@ -32,9 +32,9 @@
 
 </script>
 		
-<meta property="og:image" content="img/thumb.jpeg">
+<meta property="og:image" content="img2/thumb.png">
 <!-- 테스트 -->
-<title>안디옥교회 새벗초청예배</title>
+<title>플레이맘 2023 사업설명회</title>
 <meta property="og:description" content="10/29(토)18:00 구미&서울안디옥교회">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#000000">
@@ -56,45 +56,55 @@
   
   <!-- body start -->
   <div id="page-transitions" style="min-height: 592px;">
+    
     <!-- <div id="menu-hider" style="transition: all 300ms ease 0s;"></div> -->
     <div class="page-content" style="transition: all 300ms ease 0s;">
       <div class="main-img" id="thisone" >
-        <img id="2ndmain" src="img/배경1.jpeg" alt="second">
+        <img id="background" src="img2/envelope.jpg" alt="background">
+        <img id="" src="img2/letter.png" alt="background">
       </div>  
 
-      <div id="first-part">
-        <img id="more"class="first-part width-50" src="img/안디옥.png" alt="antioch">
-        <img id="more"class="first-part width-10" src="img/제목.png" alt="antioch">
-        <img id="dt"class="first-part width-50" src="img/일시.png" alt="antioch">
-        <!-- <img id="worship"class="first-part reveal2" src="img/worship.png" alt="antioch">
-        <img id="img2022"class="first-part reveal2" src="img/2022.png" alt="antioch"> -->
+      <div>
+        <img class="first-part width-30 right-align" src="img2/leap1.png" alt="leap1">
+      </div>
+     
+      <div id="first-part" class="reveal">
+        <img id="mt-30" class="first-part width-18" src="img2/seal.png" alt="seal">
+        <img class="first-part width-30 " src="img2/playmom.png" alt="playmom">
+        <img id="mt-30" class="first-part width-60" src="img2/title.png" alt="title">
+        <img id="mt-50" class="first-part width-80" src="img2/line.png" alt="line">
+        <img id="mt-50"class="first-part width-75" src="img2/content1.png" alt="cont1">
+        <img id="mt-50" class="first-part width-10" src="img2/leap2.png" alt="leap2">
       </div>
 
 
       <div id="second-part">
-        <img id="fall" class="second-part reveal width-50" src="img/다시없을.png" alt="antioch">
-        <img id="more" class="second-part reveal width-50" src="img/나와주님과.png" alt="antioch">
-        <img id="hand" class="second-part reveal" src="img/손1.png" alt="antioch">
-  
-        <img id="withme" class="second-part reveal width-50" src="img/withme.png" alt="antioch">
-        <img id="verse" class="second-part reveal width-50" src="img/시편.png" alt="antioch">
-       
+        <img id="mt-50"class="reveal second-part width-75" src="img2/content2.png" alt="cont2">
+        <img id="mt-50" class="reveal second-part width-50" src="img2/order.png" alt="order">
+        <img id="mt-50" class="reveal second-part width-10" src="img2/leap2.png" alt="leap2">
       </div>
 
+      <div class="third-part">
+        <img id="mt-50" class="third-part reveal width-75" src="img2/list.png" alt="list">
+        <img id="mt-50" class="reveal second-part width-10" src="img2/leap2.png" alt="leap2">
+      </div>
 
-
-      <div class="thrid-part">
+      <div class="fourth-part">
+        <img id="mt-50" class="third-part reveal width-65" src="img2/location.png" alt="location">
       
-        <img id="location"class="third-part reveal width-30" src="img/location.png" alt="antioch">
-        <img id="구미시"class="third-part reveal" src="img/경북구미시.png" alt="antioch">
-        <a href="https://map.naver.com/v5/search/%EA%B5%AC%EB%AF%B8%EC%95%88%EB%94%94%EC%98%A5%EA%B5%90%ED%9A%8C/place/12448686?c=14287507.3227545,4310727.0029327,15,0,0,0,dh&isCorrectAnswer=true">
-          <img id=""class="third-part reveal" src="img/구미약도.png" alt="antioch">
-        </a>
-        <img id="강동구"class="third-part reveal" src="img/서울강동구.png" alt="antioch">
-        <a href="https://map.naver.com/v5/search/%EC%84%9C%EC%9A%B8%EC%95%88%EB%94%94%EC%98%A5%EA%B5%90%ED%9A%8C/place/18898428?c=14152214.8233966,4514616.3021247,15,0,0,0,dh">
-          <img id=""class="third-part reveal" src="img/서울약도.png" alt="antioch">
-        </a>
+        <div id="map" style="width:500px;height:400px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aabc292c0136a9e1bcbabcc29f4a1a14"></script>
+        <script>
+          var container = document.getElementById('map');
+          var options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+          };
+      
+          var map = new kakao.maps.Map(container, options);
+        </script>
 
+        <img id="mt-50" class="third-part reveal width-65" src="img2/content3.png" alt="con3">  
       </div>
       
 
@@ -138,7 +148,7 @@
               alert("초대장 링크(url주소)를 복사 하였습니다.");
             });
           </script>
-          
+
         </div>
 
         </div>
@@ -148,10 +158,10 @@
 
 
       <!-- 안내문구 끝 -->
-      <div class="footer footer-no-padding" style="transition: all 300ms ease 0s;">
+      <!-- <div class="footer footer-no-padding" style="transition: all 300ms ease 0s;">
         <div class="footer-socials">
           
-          <!-- <a id="kakao-link-btn" href="javascript:;" class="shadow-small icon icon-round no-border icon-xs">
+          <a id="kakao-link-btn" href="javascript:;" class="shadow-small icon icon-round no-border icon-xs">
             <img src="./src/logo_kakaotalk.jpg" class="sns-logo"></a>
           <script type="text/javascript">
             // 사용할 앱의 JavaScript 키를 설정해 주세요. 1회만 설정-카카오내비랑 중복x
@@ -171,14 +181,14 @@
               },
               buttonTitle: '자세히 보기',
             });
-          </script> -->
+          </script>
 
           
         <p class="center-text bottom-0"><img src="img/안디옥대학청년회1.png" class="sns-logo"></p>
         <p class="footer-text"> ©&nbsp;<script>
             document.write(new Date().getFullYear())
           </script> Antioch Church</a>, all rights reserved</p>
-      </div>
+      </div> -->
     </div>
 
 </body>

@@ -48,6 +48,11 @@ padding: 0;
 #container2 {
   height: 900px;
 }
+#background{
+  height: 100%;
+  position: absolute;
+}
+
 #background1{
   height: 100%;
 }
@@ -105,11 +110,6 @@ padding: 0;
   width: 90%;
   margin-bottom: 10%;
   margin-top: 10%;
-}
-
-#location {
-margin-top : 250px;
-margin-bottom : 50px;
 }
 
 #address {
@@ -1239,42 +1239,32 @@ animation-name: slidein;
   z-index: 1;
 }
 #first-part{
-  margin-top:100px;
-  margin-bottom:100px;
+  margin-top: 0px;
 }
-#shadow{
+
+#mt-100{
   margin-top: 100px;
 }
 
-#fall{
-  margin-top: 250px;
-}
 
-#withme{
-  margin-top: 250px;
-}
-
-#verse{
-  margin-top: 400px;
-}
-
-#hand{
-  margin-top: 50px;
-}
-
-#dt{
+#second-part{
   margin-top: 100px;
 }
 
 .second-part{
-  width:100%;
-  height: 100%;
+  width: 100%;
+  height:100%;
+  z-index: 2;
 }
-
 .third-part{
   width:100%;
   height: 100%;
   z-index: 3;
+}
+.fourth-part{
+  width:100%;
+  height: 100%;
+  z-index: 4;
 }
 
 #625, #gumi{
@@ -1370,6 +1360,7 @@ animation-name: slidein;
   animation-name: slidein;
   animation-iteration-count: finite;
 }
+
 @keyframes slidein {
   from {
     margin-right:100%;
@@ -1382,19 +1373,77 @@ animation-name: slidein;
  }
 }
 
+
+#mt-30{
+  margin-top: 30px;
+}
+
+#mt-40{
+  margin-top: 40px;
+}
+
+
+#mt-50{
+  margin-top: 50px;
+}
+
+#mt-60{
+  margin-top: 60px;
+}
+
+.width-80{
+  width: 80%;
+  margin: auto;
+}
+
+.width-75{
+  width: 75%;
+  margin: auto;
+}
+
+.width-65{
+  width: 65%;
+  margin: auto;
+}
+
+.width-60{
+  width: 60%;
+  margin: auto;
+}
+
 .width-50{
+  width: 50%;
+  margin: auto;
+}
+
+.width-40{
   width: 40%;
   margin: auto;
 }
 
 .width-30{
-  width: 40%;
+  width: 30%;
+  margin: auto;
+}
+
+.width-20{
+  width: 20%;
+  margin: auto;
+}
+
+.width-18{
+  width: 18%;
   margin: auto;
 }
 
 .width-10{
   width: 10%;
   margin: auto;
+}
+.right-align{
+margin-right: 0;
+padding-right: 0;
+
 }
 
 
