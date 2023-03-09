@@ -1277,8 +1277,12 @@ animation-name: slidein;
   margin-top: 100px;
 }
 
-#mtb-100{
-  margin: 100px auto;
+#mtb-120{
+  margin: 120px auto;
+}
+
+#mb-100{
+  margin-bottom: 100px;
 }
 
 
@@ -1348,7 +1352,7 @@ animation-name: slidein;
   display: flex;
   margin: 10px auto;
   justify-content:flex-start;
-  width: 60%;
+  width: 55%;
   z-index: 3;
 }
 
@@ -1551,7 +1555,7 @@ padding-right: 0;
     opacity: 100%;
   }
   50% {
-    opacity: 50%;
+    opacity: 40%;
   }
   100%{
     opacity: 100%;
