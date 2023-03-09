@@ -1557,3 +1557,7 @@ padding-right: 0;
 .blink {
   animation: blink-effect 1.7s ease-in-out infinite;
 }
+
+.gray{
+  filter: grayscale(0%);
+}
