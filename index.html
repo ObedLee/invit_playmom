@@ -17,6 +17,10 @@
   <link rel="stylesheet" type="text/css" href="./src/slider.css">
   <link rel="stylesheet" href="./src/fade.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
   <!-- 폰트어썸 -->
   <script type="text/javascript" src="./src/jquery.js"></script>
   <script type="text/javascript" src="./src/plugins.js"></script>
@@ -60,8 +64,9 @@
     <!-- <div id="menu-hider" style="transition: all 300ms ease 0s;"></div> -->
     <div class="page-content" style="transition: all 300ms ease 0s;">
       <div class="main-img" id="thisone" >
-        <img id="background" src="img2/envelope.jpg" alt="background">
-        <img id="letter" src="img2/letter.png" alt="background">
+        <img id="background" src="img2/envelope2.png" alt="background">
+        <img id="background" src="img2/env.png" alt="background">
+        <img id="letter" src="img2/letter2.png" alt="background">
       </div>  
 
       <div>
@@ -74,23 +79,23 @@
         <img id="mt-60" class="first-part width-60 reveal" src="img2/title.png" alt="title">
         <img id="mt-50" class="first-part width-80 reveal" src="img2/line.png" alt="line">
         <img id="mt-50"class="first-part width-70 reveal" src="img2/content1.png" alt="cont1">
-        <img id="mt-50" class="first-part width-10 reveal" src="img2/leap2.png" alt="leap2">
+        <img id="mt-120" class="first-part width-10 reveal" src="img2/leap2.png" alt="leap2">
       </div>
 
 
-      <div id="second-part" class="reveal">
-        <img id="mt-50" class="second-part width-70" src="img2/content2.png" alt="cont2">
-        <img id="mt-50" class="second-part width-40" src="img2/order.png" alt="order">
-        <img id="mt-50" class="second-part width-10" src="img2/leap2.png" alt="leap2">
+      <div id="second-part" class="">
+        <img id="mt-120" class="second-part width-70 reveal" src="img2/content2.png" alt="cont2">
+        <img id="mt-50" class="second-part width-40 reveal" src="img2/order.png" alt="order">
+        <img id="mt-120" class="second-part width-10 reveal" src="img2/leap2.png" alt="leap2">
       </div>
 
-      <div class="third-part reveal">
-        <img id="mt-50" class="third-part width-70" src="img2/list.png" alt="list">
-        <img id="mt-50" class="second-part width-10" src="img2/leap2.png" alt="leap2">
+      <div class="third-part">
+        <img id="mt-120" class="third-part width-70 reveal" src="img2/list.png" alt="list">
+        <img id="mt-120" class="second-part width-10 reveal" src="img2/leap2.png" alt="leap2">
       </div>
 
       <div id="mt-50" class="fourth-part reveal width-70">
-        <img id="mt-50" class="fourth-part" src="img2/location.png" alt="location">
+        <img id="mt-120" class="fourth-part" src="img2/location.png" alt="location">
       
         <div id="map" style="margin:auto; padding:0; margin-top:20px; width:100%; height: 300px; "></div>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aabc292c0136a9e1bcbabcc29f4a1a14"></script>
@@ -115,121 +120,71 @@
               }
           ];
               
+
+          var imageSrc = './img2/marker2.png', // 마커이미지의 주소입니다    
+          imageSize = new kakao.maps.Size(59, 63); // 마커이미지의 크기입니다
+            
+          // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+          var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize),
+              markerPosition = new kakao.maps.LatLng(37.29911137278253, 127.00801923792174); // 마커가 표시될 위치입니다
+
+
           var marker = new kakao.maps.Marker({
                   map: map, // 마커를 표시할 지도
                   position: positions[0].latlng, // 마커를 표시할 위치
                   title : positions[0].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-              });
+                  image: markerImage
+                });
 
+        var imageSrc = './img2/marker1.png', // 마커이미지의 주소입니다    
+          imageSize = new kakao.maps.Size(59, 63); // 마커이미지의 크기입니다
+            
+          // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+          var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize),
+              markerPosition = new kakao.maps.LatLng(37.30109363890302, 127.00823093172505); // 마커가 표시될 위치입니다
 
-          var content = '<div class="wrap">' + 
-            '    <div class="info">' + 
-            '        <div class="title">' + 
-            '            수원종합운동장 북문주차장' + 
-            '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
-            '        </div>' + 
-            '    </div>' +    
-            '</div>';
-
-        // 커스텀 오버레이를 생성합니다
-        var overlay = new kakao.maps.CustomOverlay({
-            content: content,
-            map: map,
-            position: marker.getPosition()       
-        });
-
-        // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-        kakao.maps.event.addListener(marker, 'click', function() {
-            overlay.setMap(map);
-        });
-
-        // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
-        function closeOverlay() {
-            overlay.setMap(null);     
-        }
 
         var marker = new kakao.maps.Marker({
                   map: map, // 마커를 표시할 지도
                   position: positions[1].latlng, // 마커를 표시할 위치
                   title : positions[1].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                  image: markerImage
+              
               });
-
-
-          var content = '<div class="wrap">' + 
-            '    <div class="info">' + 
-            '        <div class="title">' + 
-            '            키플레이스 본사 3F' + 
-            '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
-            '        </div>' + 
-            '    </div>' +    
-            '</div>';
-
-        // 커스텀 오버레이를 생성합니다
-        var overlay = new kakao.maps.CustomOverlay({
-            content: content,
-            map: map,
-            position: marker.getPosition()       
-        });
-
-        // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-        kakao.maps.event.addListener(marker, 'click', function() {
-            overlay.setMap(map);
-        });
-
-        // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
-        function closeOverlay() {
-            overlay.setMap(null);     
-        }
-
 
         </script>
       </div>
 
       <div class="reveal">
-        <img id="mt-20" class="fiveth-part width-60" src="img2/content3.png" alt="con3">  
-        <img id="mt-50" class="fiveth-part width-30 " src="img2/playmom.png" alt="playmom">
+        <img id="mt-50" class="fiveth-part width-60" src="img2/content3.png" alt="con3">  
+        <img id="mt-120" class="fiveth-part width-40 blink" src="img2/playmom.png" alt="playmom">
       </div>
       
-        <div class="footer" style="transition: all 300ms ease 0s;">
-          <div class="footer-socials">
+
+      <div id="information" class="footer-socials">
   
           <a href="https://playmom.co.kr/"
           target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img2/logo.png"
             class="sns-logo"></a>   
 
-        <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
-          integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
-        <script>
-          Kakao.init('aabc292c0136a9e1bcbabcc29f4a1a14'); // 사용하려는 앱의 JavaScript 키 입력
-        </script>
+          <a href="https://cafe.naver.com/partyplaymom/"
+          target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/logo_cafe.png"
+            class="sns-logo"></a>
 
-        <a id="kakaotalk-sharing-btn" href="javascript:shareMessage()" class="shadow-small icon icon-round no-border icon-xs">
-          <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" class="sns-logo"
-            alt="카카오톡 공유 보내기 버튼" />
-        </a>
-
-        <script>
-          function shareMessage() {
-            Kakao.Share.sendScrap({
-              requestUrl: 'https://dmz1023.github.io/invit_playmom/',
-            });
-          }
-        </script>
           <a href="https://www.instagram.com/playmom_official/"
           target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/insta.png"
             class="sns-logo"></a>
 
-          <a href="https://cafe.naver.com/partyplaymom/"
-            target="_blank" class="shadow-small icon icon-round no-border icon-xs "><img src="./img/logo_cafe.png"
-              class="sns-logo"></a>
-
-          <a href="https://dmz1023.github.io/invit_playmom/" id="copyUrl"
-          class="shadow-small icon icon-round no-border icon-xs bg-tumblr"><i class="fa fa-link font-14"></i></a>
-
-          <a href="https://dmz1023.github.io/invit_playmom/"
+          <!-- <a href="https://dmz1023.github.io/invit_playmom/"
           class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
-            class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a>
-         
+            class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a> -->
+       
+      </div>
+
+      <div id="information1">
+        <a id="copyUrl"
+        class="shadow-small icon icon-round no-border icon-xs bg-tumblr"><i class="fa fa-link font-14"></i></a>
+        <p id="copyUrl" class="copyText">&nbsp; &nbsp; 링크 복사하기</p>
         <div> 
           <textarea id="url" readonly="">https://dmz1023.github.io/invit_playmom/</textarea>
           <script>
@@ -240,8 +195,39 @@
             });
           </script>
         </div>
-        </div>
+  
       </div>
+
+      <div id="information1">
+        <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+          integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+        <script>
+          Kakao.init('aabc292c0136a9e1bcbabcc29f4a1a14'); // 사용하려는 앱의 JavaScript 키 입력
+        </script>
+
+        <a id="kakaotalk-sharing-btn" href="javascript:shareMessage()" class="shadow-small icon icon-round no-border icon-xs">
+          <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" class="sns-logo"
+            alt="카카오톡 공유 보내기 버튼" />
+        </a>
+        <p id="kakaotalk-sharing-btn" class="copyText">&nbsp; &nbsp; 카카오톡으로 공유하기</p>
+
+        <script>
+          function shareMessage() {
+            Kakao.Share.sendScrap({
+              requestUrl: 'https://dmz1023.github.io/invit_playmom/',
+            });
+          }
+        </script>
+      </div>
+      <div id="information2">
+        <p class="copyText"> ©&nbsp;
+          
+        <script>
+          document.write(new Date().getFullYear())
+        </script> Obed</a>, all rights reserved</p>  
+
+      </div>
+
       </div>
 
       <!-- 오시는길 끝 -->
